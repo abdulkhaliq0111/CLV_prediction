@@ -152,7 +152,7 @@ The most important arguments in RandomizedSearchCV are n_iter, which controls th
 
 From these results, we able to narrow the range of values for each hyperparameter.
 
-MAPE of the final randomized searched model was 10.935.We achieved an unspectacular improvement in accuracy of 0.4%. Depending on the application though, this could be a significant benefit.
+MAPE of the final randomized searched model was 10.935 from initially 11.1537.We achieved an unspectacular improvement in accuracy. Depending on the application though, this could be a significant benefit.
 
 
 
