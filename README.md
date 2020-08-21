@@ -6,17 +6,17 @@
 
 2. Pre Processing of Data
 
- a. Feature Selection
+a. Feature Selection
 
- b. Co-relations
+b. Co-relations
 
- c. Visualisation of Data
+c. Visualisation of Data
 
 3. Feature Interpretation
 
- a. Minimizing Variables
+a. Minimizing Variables
  
- b. Stratified Shuffle-split
+b. Stratified Shuffle-split
  
 4. Model Selection
 
@@ -79,11 +79,17 @@ revenue
 Here we used some of the imported libraries Numpy ,Pandas ,MatplotLib ,Seaborn,
 Sklearn.
 
-we’ll use a Standard Scaler to standardize our data.After data standardization,We’ll employ PCA to reduce the number of features in our data set.
+we used a Standard Scaler to standardize our data.After data standardization,We’ll employ PCA to reduce the number of features in our data set.
 
-We’ll incorporate the newly obtained PCA scores in the K-means algorithm. That’s how we can perform segmentation based on principal components scores instead of the original features.
+We incorporate the newly obtained PCA scores in the K-means algorithm. That’s how we can perform segmentation based on principal components scores instead of the original features.
 
-Before all else, we’ll create a new data frame. It allows us to add in the values of the separate components to our segmentation data set. The components’ scores are stored in the ‘scores P C A’ variable. Let’s label them Component 1, 2 and 3. In addition, we also append the ‘K means P C A’ labels to the new data frame.
+Before all else, we create a new data frame. It allows us to add in the values of the separate components to our segmentation data set. The components’ scores are stored in the ‘scores P C A’ variable. Let’s label them Component 1, 2 and 3. In addition, we also append the ‘K means P C A’ labels to the new data frame.
+
+Added 4 new features to the dataset by applying a mixture of PCA and Kmeans on highly correlated features which decreased MAPE more than 0.2.
+
+
+
+ALSo applied ISOLATION FOREST technique for anamoly and outlier detection. for preventing loss of data log-transformed few features to remove outliers and reduce skewness of data.
 
 # FEATURE SELECTION:
 
@@ -117,6 +123,9 @@ Number of Open Complaints’, ’Vehicle Size’, ‘Months Since Policy Incepti
 ● We also removed the feauture ‘Employment Status’ as Unemployment is the major
 part in Employment Status which is also covered in ‘Income’ feauture.
 
+FEATURE IMPORTANCES:
+Used Featuretools library specially adopted for feature engineering and found features with zero importances,high importances etc by fitting a gradient descent regression model.
+
 # STRATIFIED SHUFFLE-SPLIT:
 
 ● To split dataset into train set and test set,we used stratified shuffle-split function
@@ -131,6 +140,19 @@ returns stratified randomized folds.
 test set to train accurately.
 
 # MODEL SELECTION
+After trying linear regression,decision tree,bagging models, we’ve built a random forest model to solve our machine learning problem but we’re not too impressed by the results.
+
+so,our first step should be to gather more data and perform feature engineering.
+
+next we moved to other techniques like-
+
+Using Scikit-Learn’s RandomizedSearchCV method, we defined a grid of hyperparameter ranges, and randomly sample from the grid, performing K-Fold CV with each combination of values.
+
+The most important arguments in RandomizedSearchCV are n_iter, which controls the number of different combinations to try, and cv which is the number of folds to use for cross validation. More iterations will cover a wider search space and more cv folds reduces the chances of overfitting, but raising each will increase the run time. Machine learning is a field of trade-offs, and performance vs time is one of the most fundamental.
+
+From these results, we able to narrow the range of values for each hyperparameter.
+
+MAPE of the final randomized searched model was 10.935.We achieved an unspectacular improvement in accuracy of 0.4%. Depending on the application though, this could be a significant benefit.
 
 
 
