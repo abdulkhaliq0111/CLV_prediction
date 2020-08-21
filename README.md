@@ -1,5 +1,5 @@
 # CLV_prediction
-![Test Image 4](https://github.com/abdulkhaliq0111/CLV_prediction/blob/master/power%20bi%20dashboard%20snapshot.JPG)
+
 # INDEX
 
 1. Introduction
@@ -108,6 +108,9 @@ were more significant.
 ➢ Policy Type
 
 ➢ Location Code
+
+## Screenshot of POWER BI Dashboard:
+![Test Image 4](https://github.com/abdulkhaliq0111/CLV_prediction/blob/master/power%20bi%20dashboard%20snapshot.JPG)
 
 # CO-RELATIONS:
 
