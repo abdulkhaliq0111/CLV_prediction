@@ -131,7 +131,9 @@ Number of Open Complaints’, ’Vehicle Size’, ‘Months Since Policy Incepti
 part in Employment Status which is also covered in ‘Income’ feauture.
 
 FEATURE IMPORTANCES:
-Used Featuretools library specially adopted for feature engineering and found features with zero importances,high importances etc by fitting a gradient descent regression model.
+Used Featuretools library specially adopted for feature engineering and found features with zero importances,high importances etc by fitting a gradient boosting regression model.
+
+![Test Image 4](https://github.com/abdulkhaliq0111/CLV_prediction/blob/master/feat.png)
 
 # STRATIFIED SHUFFLE-SPLIT:
 
