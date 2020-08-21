@@ -1,5 +1,5 @@
 # CLV_prediction
-![Test Image 4](https://github.com/tograh/testrepository/3DTest.png 393)
+![Test Image 4](https://github.com/abdulkhaliq0111/CLV_prediction/blob/master/power%20bi%20dashboard%20snapshot.JPG)
 # INDEX
 
 1. Introduction
