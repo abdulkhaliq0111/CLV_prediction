@@ -89,6 +89,8 @@ We incorporate the newly obtained PCA scores in the K-means algorithm. That’s 
 
 Before all else, we create a new data frame. It allows us to add in the values of the separate components to our segmentation data set. The components’ scores are stored in the ‘scores P C A’ variable. Let’s label them Component 1, 2 and 3. In addition, we also append the ‘K means P C A’ labels to the new data frame.
 
+![Test Image 4](https://github.com/abdulkhaliq0111/CLV_prediction/blob/master/pca%20clusster.png)
+
 Added 4 new features to the dataset by applying a mixture of PCA and Kmeans on highly correlated features which decreased MAPE more than 0.2.
 
 
