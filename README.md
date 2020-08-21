@@ -2,25 +2,25 @@
 
 # INDEX
 
-   1. Introduction
+1. Introduction
 
-   2. Pre Processing of Data
+2. Pre Processing of Data
 
  a. Feature Selection
 
  b. Co-relations
 
-c. Visualisation of Data
+ c. Visualisation of Data
 
-    3. Feature Interpretation
+3. Feature Interpretation
 
  a. Minimizing Variables
  
  b. Stratified Shuffle-split
  
-    4. Model Selection
+4. Model Selection
 
-     5. Result
+5. Result
 
 # INTRODUCTION
 
@@ -79,6 +79,12 @@ revenue
 Here we used some of the imported libraries Numpy ,Pandas ,MatplotLib ,Seaborn,
 Sklearn.
 
+we’ll use a Standard Scaler to standardize our data.After data standardization,We’ll employ PCA to reduce the number of features in our data set.
+
+We’ll incorporate the newly obtained PCA scores in the K-means algorithm. That’s how we can perform segmentation based on principal components scores instead of the original features.
+
+Before all else, we’ll create a new data frame. It allows us to add in the values of the separate components to our segmentation data set. The components’ scores are stored in the ‘scores P C A’ variable. Let’s label them Component 1, 2 and 3. In addition, we also append the ‘K means P C A’ labels to the new data frame.
+
 # FEATURE SELECTION:
 
 ❖ Firstly we removed the features ‘ Customer ’ and ‘Effective to Date ’ because of the
@@ -125,32 +131,10 @@ returns stratified randomized folds.
 test set to train accurately.
 
 # MODEL SELECTION
-## LINEAR REGRESSION:
-● Initial intuition behind using Linear Regression was the conditional independence
-of the available feautures.
 
-● From this we found the coefficients of the feautures ,from where we can know the
-dependency of each feautures.
 
-● R^2(R Square) value obtained : 0.1858
 
-● Standard Deviation of Root Mean Square Error(RMSE) : 295.7399
 
-● Mean Absolute Percentage Error (MAPE) : 59.2176
-
-## DECISION TREE:
-
-● This model will provide an effective method of Decision Making since,they allow us
-to analyze fully the possible consequences of a decision.
-
-● It provides us a framework to quantify the values of outcomes and the probablities
-of achieving them.
-
-● R^2(R Square) value obtained : 0.4988
-
-● Standard Deviation of Root Mean Square Error(RMSE) : 387.70
-
-● Mean Absolute Percentage Error (MAPE) : 12.9891
 
 
 
